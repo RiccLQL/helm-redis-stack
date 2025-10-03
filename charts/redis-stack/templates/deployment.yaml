@@ -19,6 +19,7 @@ spec:
       - name: "{{ .Values.name }}"
         image: {{ .Values.redis_stack.image }}:{{ .Values.redis_stack.tag }}
         imagePullPolicy: Always
+        command: ["{{ .Values.redis_stack.command }}"]
         ports:
         - containerPort: {{ .Values.redis_stack.redis_server_port }}
           name: db
