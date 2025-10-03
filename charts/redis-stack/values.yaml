@@ -9,3 +9,4 @@ redis_stack:
   memory: 1Gi
   cpu: 100m
   affinity: {}
+  command: "redis-stack --notify-keyspace-events AKE"
